@@ -78,6 +78,19 @@ def convert_files(source_dir, css_path_option):
                 
             logger.info("Converted from %(src)s to %(dst)s." % { "src": src_name, "dst": target_name })
 
+        # Attempt at converting .ipynb files, but it's better to use their built in export option
+        # for file in fnmatch.filter(files, "*.ipynb"):
+        #     src_name = os.path.join(directory, file)
+        #     src_filename = file.rsplit('.', 1)[0]
+        #     target_name = os.path.join(directory, "%s.html" % src_filename)
+
+        #     output = pypandoc.convert_file(
+        #         source_file=src_name,
+        #         outputfile=target_name,
+        #         to='html',
+        #         format='ipynb',
+        #         extra_args=(css_path_option, '-s'))
+
 def main():
     try:
         parse_command()
