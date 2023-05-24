@@ -1,3 +1,6 @@
+<base target="_blank">
+<!-- sets all links to open in a new tab -->
+
 ## git-test
 
 A repository used for testing git commands 
