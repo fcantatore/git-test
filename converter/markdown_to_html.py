@@ -82,14 +82,15 @@ def convert_files(source_dir, css_path_option):
         # for file in fnmatch.filter(files, "*.ipynb"):
         #     src_name = os.path.join(directory, file)
         #     src_filename = file.rsplit('.', 1)[0]
-        #     target_name = os.path.join(directory, "%s.html" % src_filename)
+        #     target_name = os.path.join(directory, "%s.md" % src_filename)
 
         #     output = pypandoc.convert_file(
         #         source_file=src_name,
         #         outputfile=target_name,
-        #         to='html',
-        #         format='ipynb',
-        #         extra_args=(css_path_option, '-s'))
+        #         to='gfm',
+        #         # format='ipynb',
+        #         extra_args=(css_path_option, '-s'),
+        #         filters=[LINK_FILTER])
 
 def main():
     try:
